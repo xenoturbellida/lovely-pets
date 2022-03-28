@@ -1,10 +1,16 @@
 import React from 'react';
 import './App.module.sass';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {MainPage} from "./pages/MainPage";
 
 
 function App() {
   return (
-      <div>Lovely Pets</div>
+      <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<MainPage/>}/>
+        </Routes>
+      </BrowserRouter>
   );
 }
 
