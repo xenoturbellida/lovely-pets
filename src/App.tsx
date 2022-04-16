@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.module.sass';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import {MainPage} from "./pages/MainPage";
+import {MainPage} from "./pages/Main";
 
 
 function App() {
