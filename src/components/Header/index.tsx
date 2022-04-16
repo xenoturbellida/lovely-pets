@@ -1,6 +1,6 @@
 import logo from '../../assets/logo.svg';
 import {Anchor} from "../ui/Anchor";
-import account_icon from '../../assets/icons/account.svg';
+
 
 export const Header = () => {
     return (
@@ -19,7 +19,7 @@ export const Header = () => {
                     </li>
                 </ul>
             </nav>
-            <Anchor href={'#'} img={account_icon}>Войти</Anchor>
+            <Anchor href={'#'} img='account'>Войти</Anchor>
         </header>
     )
 }

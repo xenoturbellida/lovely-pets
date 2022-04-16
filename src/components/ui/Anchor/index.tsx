@@ -1,19 +1,16 @@
 import {FC} from 'react';
+import {Icon} from "../Icon";
+import styles from "./index.module.sass";
+import {IAnchor} from "./index.interfaces";
 
-
-export interface IAnchor {
-    href: string;
-    img?: string;
-    active?: boolean;
-}
 
 export const Anchor: FC<IAnchor> = (
-    {href, img, children}
+    {href, img, img_size=24, children}
 ) => {
     return (
-        <a href={href}>
+        <a href={href} className={styles.anchor}>
             {img &&
-                <img src={img} alt='' />
+                <Icon name={img} size={img_size} />
             }
             {children}
         </a>
