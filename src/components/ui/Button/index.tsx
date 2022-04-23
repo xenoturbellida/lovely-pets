@@ -6,7 +6,14 @@ import classNames from "classnames/bind";
 
 const cn =classNames.bind(styles);
 
-export const Button: FC<IButton> = ({children, onClick, mode="primary"}) => {
+export const Button: FC<IButton> =
+    ({
+         children,
+         onClick,
+         mode="primary",
+         type='button',
+         ...props
+    }) => {
     return(
         <button
             onClick={onClick}
@@ -16,6 +23,8 @@ export const Button: FC<IButton> = ({children, onClick, mode="primary"}) => {
                 secondary: mode === "secondary",
                 alternative: mode === "alternative",
             })}
+            type={type}
+            {...props}
         >
             {children}
         </button>
