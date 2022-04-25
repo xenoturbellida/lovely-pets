@@ -13,7 +13,6 @@ export const AuthForm = observer(() => {
         <Formik
             initialValues={{email: '', password: ''}}
             onSubmit={(values, {setSubmitting}) => {
-                alert('Submit');
                 setSubmitting(false);
                 logIn(values.email, values.password);
             }}
